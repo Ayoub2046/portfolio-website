@@ -1,0 +1,378 @@
+/* /css/style.css - Updated with AyoubDesignDev Brand Colors */
+
+/* --- Google Font & CSS Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --vibrant-green: #39FF14; /* From the logo's bright green */
+    --deep-blue: #001FFF;      /* From the logo's deep blue */
+    --white: #FFFFFF;
+    --dark-bg: #101018;        /* A very dark, modern background */
+    --light-bg: #F5F5F5;       /* A clean, light background for content */
+    --text-dark: #222222;
+    --text-light: #EAEAEA;
+}
+
+/* --- Global Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2, h3, h4 {
+    color: var(--deep-blue);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--deep-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--vibrant-green);
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    background: var(--dark-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--vibrant-green);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    color: var(--text-light);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--vibrant-green);
+    border-bottom-color: var(--vibrant-green);
+}
+
+/* --- Hero Section (Home Page) --- */
+.hero {
+    background: linear-gradient(135deg, var(--vibrant-green), var(--deep-blue));
+    color: var(--white);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero .title {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    background: var(--vibrant-green);
+    color: var(--dark-bg);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid var(--vibrant-green);
+}
+
+.btn:hover {
+    background: var(--vibrant-green);
+    color: var(--dark-bg);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--vibrant-green);
+    color: var(--vibrant-green);
+    margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+    background: var(--vibrant-green);
+    color: var(--dark-bg);
+}
+
+/* --- General Page Styling --- */
+.page-header {
+    background: var(--deep-blue);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+}
+.page-header h1 {
+    color: var(--white);
+}
+
+/* --- About Page --- */
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--vibrant-green);
+}
+.bio-text {
+    flex: 1;
+}
+
+/* --- Research & Project Cards --- */
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    color: var(--deep-blue);
+}
+
+/* --- Projects Page --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Contact Page --- */
+.contact-list {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.contact-list li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list li strong {
+    color: var(--deep-blue);
+    margin-right: 10px;
+    width: 80px; /* Aligns the text */
+}
+
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark-bg);
+    color: var(--text-light);
+    margin-top: 3rem;
+}
+
+/* --- Responsive (Mobile Menu) --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-nav {
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1.2rem;
+        right: 1rem;
+    }
+    .main-nav.active {
+        max-height: 300px; /* Adjust as needed */
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- Theme Toggle & Dark Mode --- */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    order: 3; /* Places it after logo and nav in flexbox */
+    margin-left: 1rem;
+    line-height: 1; /* Aligns icon better */
+    transition: transform 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+body.dark-mode .card {
+    background: #1A1A22; /* Slightly lighter than the dark-bg */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: var(--vibrant-green);
+}
+
+body.dark-mode a {
+    color: var(--vibrant-green);
+}
+
+body.dark-mode a:hover {
+    color: var(--white);
+}
+
+body.dark-mode .contact-list li strong {
+    color: var(--vibrant-green);
+}
+
+body.dark-mode .page-header {
+    background: var(--dark-bg);
+    border-bottom: 2px solid var(--deep-blue);
+}
+
+body.dark-mode .page-header h1 {
+    color: var(--vibrant-green);
+}
+
+/* Adjust button for dark mode for better contrast if needed */
+body.dark-mode .btn {
+    color: var(--dark-bg);
+}
+
+body.dark-mode .btn-secondary {
+    color: var(--vibrant-green);
+    border-color: var(--vibrant-green);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: var(--vibrant-green);
+    color: var(--dark-bg);
+}
+
+/* Make sure mobile menu toggle button is visible */
+@media (max-width: 768px) {
+    .site-header {
+        position: relative; /* Needed for absolute positioning of buttons */
+        flex-wrap: wrap; /* Allows items to wrap */
+    }
+
+    .hamburger {
+        position: static; /* Override previous absolute positioning */
+        order: 2;
+    }
+    
+    .theme-toggle-btn {
+        position: absolute;
+        top: 1.2rem;
+        right: 4rem; /* Position it next to the hamburger */
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 1.2rem;
+        right: 1rem;
+    }
+};
